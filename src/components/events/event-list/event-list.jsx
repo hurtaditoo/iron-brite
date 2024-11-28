@@ -10,7 +10,7 @@ function EventList({ className = '' }) {
   }, []);
 
   return (
-    <div className={`d-flex ${className} flex-wrap gap-2`}>
+    <div className={`d-flex ${className} flex-wrap gap-3`}>
       {events.map((event) => (
         <EventItem key={event.id} event={event} />
       ))} 
