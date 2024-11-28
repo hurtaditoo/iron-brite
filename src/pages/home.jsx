@@ -4,7 +4,11 @@ import { PageLayout } from "../components/layouts";
 function Home() {
   return (
     <PageLayout>
-      <EventList />
+      <h3 className="fw-light">What's on in Madrid</h3>
+      <EventList city="Madrid" max={4} />
+
+      <h3 className="fw-light">What's on in Barcelona</h3>
+      <EventList city="Barcelona" max={4} />
     </PageLayout>
   )
 }
