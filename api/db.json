@@ -1,0 +1,277 @@
+{
+  "events": [
+    {
+      "id": "a07c034d-47f4-4a86-97d6-80f8a57f3960",
+      "title": "Concierto de Flamenco al Aire Libre",
+      "description": "Vive una experiencia auténtica del flamenco en un entorno único.",
+      "location": "Plaza de España",
+      "city": "Sevilla",
+      "categories": [
+        "música",
+        "cultura",
+        "flamenco"
+      ],
+      "poster": "https://picsum.photos/seed/a07c034d-47f4-4a86-97d6-80f8a57f3960/800/600",
+      "eventDate": "2024-12-18T20:00:00Z"
+    },
+    {
+      "id": "b29d2d8c-df56-4b80-a6f5-ef8b18d3d23b",
+      "title": "Festival Internacional de Cine de San Sebastián",
+      "description": "Uno de los festivales de cine más prestigiosos de Europa.",
+      "location": "Teatro Victoria Eugenia",
+      "city": "San Sebastián",
+      "categories": [
+        "cine",
+        "festival",
+        "cultura"
+      ],
+      "poster": "https://picsum.photos/seed/b29d2d8c-df56-4b80-a6f5-ef8b18d3d23b/800/600",
+      "eventDate": "2024-09-20T18:30:00Z"
+    },
+    {
+      "id": "2e4d5077-2e53-4e92-b5e5-22fbd1f50974",
+      "title": "Exposición de Arte Contemporáneo",
+      "description": "Disfruta de las obras de artistas emergentes en un ambiente moderno.",
+      "location": "Museo Guggenheim",
+      "city": "Bilbao",
+      "categories": [
+        "arte",
+        "exposición",
+        "cultura"
+      ],
+      "poster": "https://picsum.photos/seed/2e4d5077-2e53-4e92-b5e5-22fbd1f50974/800/600",
+      "eventDate": "2024-11-15T10:00:00Z"
+    },
+    {
+      "id": "3a9209e9-90c4-400d-b441-1d914cce2b9e",
+      "title": "Concierto de Jazz en la Plaza Mayor",
+      "description": "Una noche mágica con lo mejor del jazz internacional.",
+      "location": "Plaza Mayor",
+      "city": "Madrid",
+      "categories": [
+        "música",
+        "jazz"
+      ],
+      "poster": "https://picsum.photos/seed/3a9209e9-90c4-400d-b441-1d914cce2b9e/800/600",
+      "eventDate": "2024-10-25T22:00:00Z"
+    },
+    {
+      "id": "4d68a1f3-16ac-4e0d-a99d-478273a536d5",
+      "title": "Festival de la Tomatina",
+      "description": "¡La fiesta más divertida de España! Únete a la batalla de tomates.",
+      "location": "Plaza del Pueblo",
+      "city": "Buñol",
+      "categories": [
+        "festival",
+        "gastronomía"
+      ],
+      "poster": "https://picsum.photos/seed/4d68a1f3-16ac-4e0d-a99d-478273a536d5/800/600",
+      "eventDate": "2024-08-28T12:00:00Z"
+    },
+    {
+      "id": "e0340565-df6b-4f3b-b0cf-8a2a02c8e158",
+      "title": "Ciclismo de Montaña en los Pirineos",
+      "description": "Vive la emoción del ciclismo de montaña en uno de los paisajes más impresionantes de España.",
+      "location": "Estación de Esquí de Formigal",
+      "city": "Huesca",
+      "categories": [
+        "deporte",
+        "aventura",
+        "ciclismo"
+      ],
+      "poster": "https://picsum.photos/seed/e0340565-df6b-4f3b-b0cf-8a2a02c8e158/800/600",
+      "eventDate": "2024-06-12T08:00:00Z"
+    },
+    {
+      "id": "5c7ed2c7-7c34-4ff6-b47c-56c8da13458e",
+      "title": "Concierto de Música Electrónica",
+      "description": "Los mejores DJs internacionales se reúnen para una noche electrificante.",
+      "location": "Finca Solaz",
+      "city": "Valencia",
+      "categories": [
+        "música",
+        "electrónica"
+      ],
+      "poster": "https://picsum.photos/seed/5c7ed2c7-7c34-4ff6-b47c-56c8da13458e/800/600",
+      "eventDate": "2024-07-10T23:00:00Z"
+    },
+    {
+      "id": "6c3a4e8c-5f64-4c7a-bcf5-5d3c24ff91ae",
+      "title": "Feria del Libro Antiguo",
+      "description": "Una oportunidad única para adquirir libros raros y antiguos.",
+      "location": "Parque del Retiro",
+      "city": "Madrid",
+      "categories": [
+        "cultura",
+        "literatura"
+      ],
+      "poster": "https://picsum.photos/seed/6c3a4e8c-5f64-4c7a-bcf5-5d3c24ff91ae/800/600",
+      "eventDate": "2024-05-22T10:00:00Z"
+    },
+    {
+      "id": "7c4ab1d7-b06b-4b2a-9223-9a7f7b394fa4",
+      "title": "Rastro de Madrid",
+      "description": "Descubre antigüedades, ropa vintage y todo tipo de curiosidades.",
+      "location": "La Latina",
+      "city": "Madrid",
+      "categories": [
+        "mercado",
+        "cultura",
+        "antigüedades"
+      ],
+      "poster": "https://picsum.photos/seed/7c4ab1d7-b06b-4b2a-9223-9a7f7b394fa4/800/600",
+      "eventDate": "2024-12-06T09:00:00Z"
+    },
+    {
+      "id": "b5c41d7f-f40d-41fd-87fd-9a453b9f7789",
+      "title": "Vuelta Ciclista a España",
+      "description": "El evento ciclista más importante del país recorre los paisajes más impresionantes de España.",
+      "location": "Varios puntos de España",
+      "city": "Madrid",
+      "categories": [
+        "deporte",
+        "ciclismo",
+        "competición"
+      ],
+      "poster": "https://picsum.photos/seed/b5c41d7f-f40d-41fd-87fd-9a453b9f7789/800/600",
+      "eventDate": "2024-08-22T10:00:00Z"
+    },
+    {
+      "id": "bdb0e9e5-7f6e-463b-9355-5b4107262d34",
+      "title": "Concierto de Música Clásica en la Alhambra",
+      "description": "Una velada de música clásica en el entorno mágico de la Alhambra.",
+      "location": "Palacio de Carlos V",
+      "city": "Granada",
+      "categories": [
+        "música",
+        "clásica",
+        "cultura"
+      ],
+      "poster": "https://picsum.photos/seed/bdb0e9e5-7f6e-463b-9355-5b4107262d34/800/600",
+      "eventDate": "2024-07-04T21:00:00Z"
+    },
+    {
+      "id": "8f981c1b-2442-4709-b5ed-cb40fe45b34b",
+      "title": "Feria de Abril",
+      "description": "Disfruta de la feria más importante de Sevilla, llena de música, baile y gastronomía.",
+      "location": "Real de la Feria",
+      "city": "Sevilla",
+      "categories": [
+        "festival",
+        "cultura",
+        "gastronomía"
+      ],
+      "poster": "https://picsum.photos/seed/8f981c1b-2442-4709-b5ed-cb40fe45b34b/800/600",
+      "eventDate": "2024-04-12T18:00:00Z"
+    },
+    {
+      "id": "ea7d5e4f-03fb-44c1-a803-cf63e850f4e3",
+      "title": "Concierto de Rock en el Río",
+      "description": "El mejor rock en vivo a orillas del río Guadalquivir.",
+      "location": "Río Guadalquivir",
+      "city": "Córdoba",
+      "categories": [
+        "música",
+        "rock"
+      ],
+      "poster": "https://picsum.photos/seed/ea7d5e4f-03fb-44c1-a803-cf63e850f4e3/800/600",
+      "eventDate": "2024-06-15T21:00:00Z"
+    },
+    {
+      "id": "bb4e62a9-590b-4703-b4e1-e8b9b6268652",
+      "title": "Festival de Jazz de Barcelona",
+      "description": "Una semana completa con lo mejor del jazz mundial.",
+      "location": "Palau de la Música",
+      "city": "Barcelona",
+      "categories": [
+        "música",
+        "jazz",
+        "festival"
+      ],
+      "poster": "https://picsum.photos/seed/bb4e62a9-590b-4703-b4e1-e8b9b6268652/800/600",
+      "eventDate": "2024-10-10T19:00:00Z"
+    },
+    {
+      "id": "ca4e51f4-0cc2-4408-b4f0-b1b84904e680",
+      "title": "Concierto de Ópera en el Teatro Real",
+      "description": "Disfruta de una noche con las mejores óperas del mundo en el Teatro Real de Madrid.",
+      "location": "Teatro Real",
+      "city": "Madrid",
+      "categories": [
+        "música",
+        "ópera",
+        "cultura"
+      ],
+      "poster": "https://picsum.photos/seed/ca4e51f4-0cc2-4408-b4f0-b1b84904e680/800/600",
+      "eventDate": "2024-12-05T20:00:00Z"
+    },
+    {
+      "id": "c57b0ff0-f532-4b6e-bcbe-facb0ea5b78e",
+      "title": "Fiesta de San Fermín",
+      "description": "Vive la famosa fiesta de los encierros en Pamplona.",
+      "location": "Plaza de Toros",
+      "city": "Pamplona",
+      "categories": [
+        "fiesta",
+        "tradición",
+        "cultura"
+      ],
+      "poster": "https://picsum.photos/seed/c57b0ff0-f532-4b6e-bcbe-facb0ea5b78e/800/600",
+      "eventDate": "2024-07-06T08:00:00Z"
+    },
+    {
+      "id": "8c7f56db-b5be-48ea-bb80-b0b73b57e5ff",
+      "title": "Feria de Málaga",
+      "description": "Una gran fiesta con música, baile, y tradiciones malagueñas.",
+      "location": "Centro Histórico",
+      "city": "Málaga",
+      "categories": [
+        "fiesta",
+        "cultura"
+      ],
+      "poster": "https://picsum.photos/seed/8c7f56db-b5be-48ea-bb80-b0b73b57e5ff/800/600",
+      "eventDate": "2024-08-15T18:00:00Z"
+    },
+    {
+      "id": "ad7d9c49-c987-40bb-98b9-5c72a9920a39",
+      "title": "Mercado Medieval de Ávila",
+      "description": "Retrocede en el tiempo y vive una experiencia medieval única.",
+      "location": "Murallas de Ávila",
+      "city": "Ávila",
+      "categories": [
+        "mercado",
+        "historia",
+        "cultura"
+      ],
+      "poster": "https://picsum.photos/seed/ad7d9c49-c987-40bb-98b9-5c72a9920a39/800/600",
+      "eventDate": "2024-06-03T10:00:00Z"
+    },
+    {
+      "id": "92798d95-d7d4-49b7-b0ca-327c79f8d9d4",
+      "title": "Maratón de Madrid",
+      "description": "Participa o asiste al maratón más importante de la capital.",
+      "location": "Puerta de Alcalá",
+      "city": "Madrid",
+      "categories": [
+        "deporte",
+        "competición"
+      ],
+      "poster": "https://picsum.photos/seed/92798d95-d7d4-49b7-b0ca-327c79f8d9d4/800/600",
+      "eventDate": "2024-04-27T09:00:00Z"
+    },
+    {
+      "id": "1b5368f0-38fa-47ff-a768-f12c3f1d7319",
+      "title": "Festival de Música de Sónar",
+      "description": "Un festival de música electrónica que atrae a miles de visitantes cada año.",
+      "location": "Fira Gran Via",
+      "city": "Barcelona",
+      "categories": [
+        "música",
+        "electrónica",
+        "festival"
+      ],
+      "poster": "https://picsum.photos/seed/1b5368f0-38fa-47ff-a768-f12c3f1d7319/800/600",
+      "eventDate": "2024-06-13T21:00:00Z"
+    }
+  ]
+}
