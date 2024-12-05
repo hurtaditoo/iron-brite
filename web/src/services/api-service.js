@@ -11,6 +11,12 @@ http.interceptors.response.use(
 
 const listEvents = ({ city, limit }) => http.get('/events', { params: { city, _limit: limit }});
 
+const getEvent = (id) => http.get(`/events/${id}`);
+
+const deleteEvent = (id) => http.delete(`/events/${id}`);
+
 export {
-  listEvents
+  listEvents,
+  getEvent,
+  deleteEvent
 }

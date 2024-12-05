@@ -4,17 +4,19 @@ import * as IronBriteApi from '../../../services/api-service';
 
 function EventList({ className = '', city, max }) {
   const [events, setEvents] = useState([]);
+  const [reload, setReload] = useState(false);
 
   useEffect(() => {
     console.log(`RELOADING... ${{ city, max }}`);
     IronBriteApi.listEvents({ city, limit: max })
       .then((events) => setEvents(events))
       .catch((error) => console.error(error))
-  }, [city, max]);
+  }, [city, max, reload]);
 
-  const handleEventDeletion = (event) => {
-    const filteredEvents = events.filter((e) => e.id !== event.id);
-    setEvents(filteredEvents);
+  const handleEventDeletion = (event) => {+
+    IronBriteApi.deleteEvent(event.id)
+      .then(() => setReload(!reload))
+      .catch((error) => console.error(error))
   }
 
   return (

@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 import { EventList } from "../components/events";
 import { PageLayout } from "../components/layouts";
 
-function Search() {
+function SearchPage() {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const city = queryParams.get('city');
@@ -17,4 +17,4 @@ function Search() {
   )
 }
 
-export default Search;
+export default SearchPage;

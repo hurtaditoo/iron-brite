@@ -1,6 +1,6 @@
 import Navbar from './components/ui/navbar/navbar';
 import { Route, Routes } from 'react-router-dom';
-import { Home, Search } from './pages';
+import { HomePage, SearchPage, EventDetailPage } from './pages';
 
 function App() {
   return (
@@ -8,8 +8,9 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/search' element={<Search />} />
+        <Route path='/' element={<HomePage/>} />
+        <Route path='/events/:id' element={<EventDetailPage />} />
+        <Route path='/search' element={<SearchPage />} />
       </Routes>
     </>
   );

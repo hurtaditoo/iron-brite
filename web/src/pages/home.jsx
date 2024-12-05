@@ -1,7 +1,7 @@
 import { EventList } from "../components/events";
 import { PageLayout } from "../components/layouts";
 
-function Home() {
+function HomePage() {
   return (
     <PageLayout>
       <h3 className="fw-light">What's on in Madrid</h3>
@@ -13,4 +13,4 @@ function Home() {
   )
 }
 
-export default Home;
+export default HomePage;
