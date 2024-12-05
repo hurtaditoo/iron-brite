@@ -1,19 +1,15 @@
 import { useEffect, useState } from "react";
 import EventItem from "../event-item/event-item";
-import eventsData from "../../../data/events.json";
+import * as IronBriteApi from '../../../services/api-service';
 
 function EventList({ className = '', city, max }) {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    console.log("RELOADING...");
-    const filteredEvents = city ? 
-      eventsData.filter((event) => event.city === city) : 
-      eventsData;
-    const tackedEvents = max != undefined ?
-      filteredEvents.slice(0, max) :
-      filteredEvents;
-    setEvents(tackedEvents);
+    console.log(`RELOADING... ${{ city, max }}`);
+    IronBriteApi.listEvents({ city, limit: max })
+      .then((events) => setEvents(events))
+      .catch((error) => console.error(error))
   }, [city, max]);
 
   const handleEventDeletion = (event) => {
