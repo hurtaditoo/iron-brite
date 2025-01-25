@@ -8,6 +8,7 @@ require('./config/db.config');
 const app = express();
 
 /* Middlewares */
+app.use(express.json());
 app.use(logger('dev'));
 app.use((req, res, next) => {
   console.log('HOLIIIIIIIIIII');
