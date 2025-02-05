@@ -8,9 +8,9 @@ require('./config/db.config');  // Con esto se conecta a la base de datos
 const app = express();
 
 /* Middlewares */
-app.use(express.json()); // Con esto se puede recibir JSON en las peticiones
-app.use(logger('dev')); // logger('dev') muestra por consola las peticiones que se hacen al servidor
-app.use((req, res, next) => { // req es de request (lleva toda la info del http) y res de response
+app.use(express.json());
+app.use(logger('dev'));
+app.use((req, res, next) => {
   console.log('HOLIIIIIIIIIII');
   next(); // Si no pongo next no se ejecuta el siguiente middleware
 })

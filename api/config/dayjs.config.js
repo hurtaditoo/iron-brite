@@ -1,3 +1,3 @@
-const dayjs = require('dayjs'); // Importa la librería dayjs
+const dayjs = require('dayjs');
 
-model.exports = dayjs;
+module.exports =  dayjs;

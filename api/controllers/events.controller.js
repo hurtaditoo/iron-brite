@@ -21,10 +21,16 @@ module.exports.create = (req, res, next) => {
     .catch((error) => next(error));
 }
 
+module.exports.create = (req, res, next) => {
+  const { body } = req;
+  Event.create(body)
+    .then((event) => res.status(201).json(event))
+    .catch((error) => next(error));
+}
 
-module.exports.detail = (req, res, next) => { // detail se usa para obtener un evento en concreto
+
+module.exports.detail = (req, res, next) => {
   const { id } = req.params;
-
   Event.findById(id)
     .then((event) => {
       if (!event) next(createError(404, 'Event not found'))
@@ -35,7 +41,6 @@ module.exports.detail = (req, res, next) => { // detail se usa para obtener un e
 
 module.exports.delete = (req, res, next) => {
   const { id } = req.params;
-
   Event.findByIdAndDelete(id)
     .then((event) => {
       if (!event) next(createError(404, 'Event not found'))
@@ -47,12 +52,6 @@ module.exports.delete = (req, res, next) => {
 module.exports.update = (req, res, next) => {
   const { id } = req.params;
   const { body } = req;
-
-  const permittedParams = ["title", "description", "startDate", "endDate"];
-  
-  Object.keys(body).forEach((key) => {
-    if (!permittedParams.includes(key)) delete body[key];
-  });
   
   Event.findByIdAndUpdate(id, body, { runValidators: true, new: true })
     .then((event) => {

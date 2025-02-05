@@ -1,46 +1,53 @@
 const mongoose = require('mongoose');
-const dayjs = require('dayjs');
+const dayjs = require('../config/dayjs.config');
 
 const eventSchema = new mongoose.Schema({ // Schema es un objeto que define la estructura de los eventos
   title: {
     type: String,
-    require: [true, 'Event title is required'],  // Si no se pone un título, salta un error
-    trim: true, // Quita los espacios en blanco al principio y al final
-    minLength: [3, 'Event title needs at least 3 characters'],  // Si el título tiene menos de 3 caracteres, salta un error
-    maxLength: [100, 'Event title needs at most 100 characters'], // Si el título tiene más de 100 caracteres, salta un error
+    required: [true, 'Title is required'],
+    trim: true,
+    minLength: [3, 'Title needs at least 3 characters'],
+    maxLength: [100, 'Title characters must be lower than 100'],
   },
-
   description: {
     type: String,
-    require: [true, 'Event description is required'],
+    required: [true, 'Description is required'],
     trim: true,
-    minLength: [10, 'Event description needs at least 10 characters'],
-    maxLength: [700, 'Event description needs at most 700 characters'],
+    minLength: [10, 'Description needs at least 3 characters'],
+    maxLength: [700, 'Description characters must be lower than 100'],
   },
-
   startDate: {
     type: Date,
-    require: [true, 'Event start date is required'],
+    required: [true, 'Starting date is required'],
     validate: {
       validator: function (startDate) {
-        return dayjs(startDate).isAfter(dayjs()); // isBefore es una función de dayjs que devuelve true si startDate es anterior a la fecha actual
+        return dayjs(startDate).isAfter(dayjs());
       },
-      message: function() {
-        return 'Starting date cannot be in the past'
+      message: function () {
+        return 'Starting date can not be in the past'
       }
     }
   },
-  
   endDate: {
     type: Date,
-    require: [true, 'Ending date is required'],
+    required: [true, 'Ending date is required'],
     validate: {
       validator: function (endDate) {
-        return dayjs(endDate).isAfter(dayjs(this.startDate)); // isAfter devuelve true si endDate es posterior a startDate
+        return dayjs(endDate).isAfter(dayjs(this.startDate));
       },
-      message: function() {
-        return 'Ending date must be after starting date'
+      message: function () {
+        return 'Starting date can not be in the past'
       }
+    }
+  }
+}, {
+  timestamps: true,
+  toJSON: {
+    transform: function (doc, ret) {
+      delete ret.__v;
+      delete ret._id;
+      ret.id = doc.id;
+      return ret;
     }
   }
 }, {
