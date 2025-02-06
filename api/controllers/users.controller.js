@@ -68,3 +68,7 @@ module.exports.validate = (req, res, next) => {
     })
     .catch(next);
 };
+
+module.exports.profile = (req, res, next) => {
+  res.json(req.user);
+};

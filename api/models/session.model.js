@@ -4,6 +4,7 @@ const schema = new mongoose.Schema(
   {
     user: {
       type: mongoose.Schema.Types.ObjectId, // esto hace referencia a la colección de usuarios de la base de datos 
+      ref: "User", // referencia al modelo User
     },
 
     lastAccess: {

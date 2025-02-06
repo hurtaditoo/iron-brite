@@ -1,9 +1,11 @@
 const createError = require('http-errors');
 const Event = require('../models/event.model');
+const Comment = require("../models/comment.model");
 
 module.exports.list = (req, res, next) => {
   Event.find()  // Devuelve una promesa con todos los eventos
-    .then((events) => res.json(events)) // Si se resuelve la promesa, se envía un json con los eventos
+  .populate("comments") // populate comments. thanks to Event virtual "comment" field  
+  .then((events) => res.json(events)) // Si se resuelve la promesa, se envía un json con los eventos
     .catch((error) => next(error));
 }
 
@@ -23,15 +25,17 @@ module.exports.create = (req, res, next) => {
 
 module.exports.create = (req, res, next) => {
   const { body } = req;
+
   Event.create(body)
     .then((event) => res.status(201).json(event))
     .catch((error) => next(error));
 }
 
-
 module.exports.detail = (req, res, next) => {
   const { id } = req.params;
+
   Event.findById(id)
+    .populate("comments")
     .then((event) => {
       if (!event) next(createError(404, 'Event not found'))
       else res.json(event);
@@ -41,6 +45,7 @@ module.exports.detail = (req, res, next) => {
 
 module.exports.delete = (req, res, next) => {
   const { id } = req.params;
+
   Event.findByIdAndDelete(id)
     .then((event) => {
       if (!event) next(createError(404, 'Event not found'))
@@ -60,3 +65,21 @@ module.exports.update = (req, res, next) => {
     })
     .catch((error) => next(error));
 }
+
+module.exports.createComment = (req, res, next) => {
+  Comment.create({
+    text: req.body.text,
+    user: req.user.id,
+    event: req.params.id,
+  })
+    .then((comment) => res.status(201).json(comment))
+    .catch(next);
+};
+
+module.exports.detailComment = (req, res, next) => {
+  Comment.findById(req.params.commentId)
+    .populate("user") // populate user. thanks to model reference to User
+    .populate("event") // populate event. thanks to model reference to Event
+    .then((comment) => res.json(comment))
+    .catch(next);
+};

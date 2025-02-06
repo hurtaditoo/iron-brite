@@ -12,15 +12,19 @@ module.exports.create = (req, res, next) => {
           .checkPassword(password)
           .then((match) => {
             if (match) {
-              if (!user.active) { // si se pasa la hora desde el último acceso, la sesión se elimina
-                next(createError(401, "user not active"));
-                return;
-              }
+              // if (!user.active) { // si se pasa la hora desde el último acceso, la sesión se elimina
+              //   next(createError(401, "user not active"));
+              //   return;
+              // }
               
               // create session key and send it to the user via set-cookie header
               Session.create({ user: user.id }) // crea una sesión con el id del usuario
                 .then((session) => {  // si la sesión se crea correctamente, se envía un json con el usuario
-                  res.setHeader("Set-Cookie", `session=${session.id}`);
+                  res.setHeader(
+                    "Set-Cookie",
+                    `session=${session.id}; HttpOnly` // HttpOnly is a flag that prevents JavaScript from accessing the cookie
+                    // `session=${session.id}; HttpOnly; Secure` -> Secure prevents the cookie from being sent over an unencrypted connection, is only used in https
+                  );
                   res.json(user);
                 })
                 .catch(next);

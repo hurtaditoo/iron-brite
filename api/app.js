@@ -10,10 +10,10 @@ const app = express();
 /* Middlewares */
 app.use(express.json());
 app.use(logger('dev'));
-app.use((req, res, next) => {
-  console.log('HOLIIIIIIIIIII');
-  next(); // Si no pongo next no se ejecuta el siguiente middleware
-})
+// app.use((req, res, next) => {
+//   console.log('HOLIIIIIIIIIII');
+//   next(); // Si no pongo next no se ejecuta el siguiente middleware
+// })
 
 /* API Routes Configuration */
 const routes = require('./config/routes.config');
