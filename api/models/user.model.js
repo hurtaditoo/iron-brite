@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, 'User name is required'],
     maxLength: [30, 'User name characters must be lower than 30'],
-    trim: true
+    trim: true,
   },
 
   email: {
@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema({
     lowercase: true,
     unique: true,
     required: [true, 'User email is required'],
-    match: [EMAIL_PATTERN, 'Invalid user email pattern']    // EMAIL_PATTERN es una expresión regular que valida el email, si el email no cumple con la expresión regular, se mostrará el mensaje 
+    match: [EMAIL_PATTERN, 'Invalid user email pattern'],    // EMAIL_PATTERN es una expresión regular que valida el email, si el email no cumple con la expresión regular, se mostrará el mensaje 
   },
 
   password: {

@@ -13,7 +13,7 @@ module.exports.checkSession = (req, res, next) => {
     ?.split("=")?.[1];
 
   if (!sessionId) {
-    next(createError(401, "missing session from cookie header"));
+    return next(createError(401, "missing session from cookie header"));
   }
 
   Session.findById(sessionId)
